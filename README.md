@@ -114,3 +114,28 @@ number operations
 ```
 
 #### 4. Arrays
+
+```perl
+my @array = ("Hello"); # create, assign values from a list
+my $array_ref = \@array; #refer to the array
+# or more short hand-y
+my $another_arr_ref = ["Hello"];
+
+# to use the array dereference it
+
+my @content = @{ $array_ref}; # prefix
+my @content = @$array_ref; #short hand, leave out braces
+
+# Postfix notation
+
+use v5.24;
+my @content = $array_ref->@*;
+
+# access array ref content by index
+
+my @array = qw(one two three);
+my $arrayref = [qw (one two three)];
+
+my $one = $array[0];
+my $one = $arrayref->[0];
+```
