@@ -17,4 +17,4 @@ else
 	$version = 0;
 }
 
-print "Your perl version is: $version\n";
+print "Perl version is: $version\n";
