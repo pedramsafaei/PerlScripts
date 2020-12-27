@@ -5,7 +5,7 @@
 
 [check version](checkVersion.pl)
 
-<p> 2nd script is for checking checking the filename of. </p>
+<p> 2nd script is for checking checking the filename</p>
 
 ```perl
 # Given a directory /usr/bin/theFamousName
