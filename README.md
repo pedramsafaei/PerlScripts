@@ -139,3 +139,46 @@ my $arrayref = [qw (one two three)];
 my $one = $array[0];
 my $one = $arrayref->[0];
 ```
+
+Arrays in perl can not be nested but array references can!
+```perl
+my @array = ((1,2), (3,4)); # This is an array of 4 elements (1,2,3,4)
+my @matrix = ( [1,2] , [3, 4] ); # This is an array of 2 array refs
+my $matrix = ( [1,2] , [3, 4] ); # This is an array refs or array refs
+```
+Notice in the above we have ```@matrix``` and ```$matrix``` these are 2 <b>different</b> values.
+Now if we want to put the diagonals of the 2 matrix values above into a new variable called ``` diagonal_one``` and ```diagonal_two``` we will have to dereference the values as mentioned before. 
+
+```perl
+my @diagonal_one = ($matrix[0]->[1], $matrix[1]->[0]) # This uses the @matrix from above
+
+my @diagonal_two = ($matrix->[0]->[1], $matrix->[1]->[0]) # This uses the $matrix from above
+```
+
+The ```[]``` and ```{}``` access can only happen on references so we can omit some of the arrows.
+
+```perl
+my @diagonal_one = $matrix[0][1] # This uses the @matrix from above
+
+my @diagonal_two = $matrix->[0][1] # This uses the $matrix from above
+```
+
+We talked about references they are very much like pointers from languages like C++ as we have to dereference before getting the value (instead of the address)
+
+```perl
+my $value = "Hello";
+my $reference = \$value;
+
+print $value; # Will be Hello
+print $reference; # Will be some hex address (0x32453523)
+
+print ${$reference}; # dereferenced using prefix syntax will be Hello
+print $$reference; # shorthand of prefix syntax same result as above
+
+print $reference->$*; # postfix syntax, same result as above
+
+${$reference} =~ s/Hello/World/;
+
+print ${$reference}; # Will result in World
+print $value; # Will result in World
+```
