@@ -4,6 +4,16 @@
 <p> First script is for checking the version of perl. </p>
 
 [check version](checkVersion.pl)
+
+<p> 2nd script is for checking checking the filename of. </p>
+
+```perl
+# Given a directory /usr/bin/theFamousName
+# The This will return "theFamousName"
+```
+
+[fileName](fileName.pl)
+
 ## Quick Notes!
 
 #### Useful Resources
