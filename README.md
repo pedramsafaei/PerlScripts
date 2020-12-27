@@ -15,6 +15,11 @@
 
 [fileName](fileName.pl)
 
+### 3. Check Kernel
+<p> Third script Calculates the amount of space needed to run the kernel, including room for the .bss and .brk sections.</p>
+
+[fileName](kernelCalc.pl)
+
 ## Quick Notes!
 
 #### Useful Resources
