@@ -27,15 +27,18 @@
 
 #### 1. Let's do this!
 <p>The famous Hello World in perl!</p>
+
 ```perl
 print "Hello World \n";
 ```
 or 
+
 ```perl
 use feature 'say';
 say "Hello World";
 ```
 or 
+
 ```perl
 use v5.10;
 say "Hello World";
@@ -48,10 +51,13 @@ $ perl -e 'print "Hello World\n"'
 ```
 
 or to not add the new line 
+
 ```perl
 $ perl -le 'print "Hello World"'
 ```
+
 or 
+
 ```perl
 $ perl -E 'say "Hello World"'
 ```
