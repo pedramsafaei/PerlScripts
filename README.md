@@ -62,6 +62,7 @@ or
 $ perl -E 'say "Hello World"'
 ```
 <p>use strict and warnings to prevent from using potentially unsafe and get warnings about common errors.</p>
+
 ```perl
 use strict;
 use warnings;
@@ -70,10 +71,12 @@ use warnings;
 #### 2. Comments
 
 Single line 
+
 ```perl
 # this is a comment
 ```
 multiline 
+
 ```perl
 =begin comment
 comment
@@ -163,6 +166,7 @@ my $one = $arrayref->[0];
 ```
 
 Arrays in perl can not be nested but array references can!
+
 ```perl
 my @array = ((1,2), (3,4)); # This is an array of 4 elements (1,2,3,4)
 my @matrix = ( [1,2] , [3, 4] ); # This is an array of 2 array refs
